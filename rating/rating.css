@@ -1,0 +1,25 @@
+.rating {
+	margin: 0px;
+	padding: 0px;
+}
+
+div.rating {
+	display: inline-block;
+}
+
+.rating span {
+	float:left;
+    margin: 0px;
+    width: 32px;
+    height:32px;
+    background:url(stars.png) left top repeat-x;
+    text-decoration:none;
+}
+
+.rating .active{
+	background-position:left -64px;
+}
+
+.rating span:hover, .rating .over {
+	background-position:left -32px;
+}
