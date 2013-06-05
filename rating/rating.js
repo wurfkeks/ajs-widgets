@@ -1,4 +1,4 @@
-angular.module('RatingTutorial',[])
+angular.module('ratingWidget',[])
 	.directive('rating', function() {
 		return {
 			restrict: 'A',
