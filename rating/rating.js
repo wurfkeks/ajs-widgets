@@ -16,6 +16,9 @@ angular.module('ratingWidget',[])
 							'</span>' +
 						'</div>',
 			link: function(scope, elem, attrs) {
+                if (attrs.readonly !== void 0)
+                    scope.readonly = true;
+                    
 				var updateStars = function() {
 					scope.stars = [];
 					for (var i=0; i<scope.max; ++i) {
@@ -31,17 +34,20 @@ angular.module('ratingWidget',[])
 			controller: function($scope) {
 				$scope.over = 0;
 				$scope.stars = [];
-				
+				$scope.readonly = false;
+                
 				for (var i=0; i<$scope.max; ++i) {
 					$scope.stars.push({});
 				}
 				
 				$scope.toggle = function(index) {
+                    if (!$scope.readonly)
 					$scope.value = index+1;
 				};
 				
 				$scope.setOver = function(index) {
-					$scope.over = index+1;
+                    if (!$scope.readonly)
+                        $scope.over = index+1;
 				};
 			}
 		};

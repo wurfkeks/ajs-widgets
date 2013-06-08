@@ -5,7 +5,12 @@
 		<script src="rating.js" ></script>
 		<link rel="stylesheet" href="rating.css"></link>
 	</head>
-	<body ng-app="ratingWidget" ng-init="rating=2">
-		<div rating value="rating" max="10"></div>
+	<body ng-app="ratingWidget" ng-init="rating1=2; rating2=7;">
+        <p> Selectable:
+            <div rating value="rating1" max="10"></div>
+        </p>
+        <p> Readonly:
+            <div rating value="rating2" max="10" readonly></div>
+        </p>
 	</body>
 </html>

@@ -20,6 +20,6 @@ div.rating {
 	background-position:left -64px;
 }
 
-.rating span:hover, .rating .over {
+.rating .over {
 	background-position:left -32px;
 }
