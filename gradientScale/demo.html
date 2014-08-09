@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+		<script src="scale.js" ></script>
+		<link rel="stylesheet" href="scale.css"></link>
+        <style>
+            #gradientScale {
+                width: 50px;
+                height: 300px;
+                border-radius: 10px;
+                border: 1px solid black;
+                background: -webkit-gradient(linear, left bottom, left top,
+                            color-stop(0.0% , #ffffff),
+                            color-stop(25.0%, #e4d96f),
+                            color-stop(37.5%, rgb(252, 179,25)),
+                            color-stop(50.0%, #ffd700),
+                            color-stop(62.5%, #ff7e00),
+                            color-stop(75.0%, #b87333),
+                            color-stop(87.5%, #c04000),
+                            color-stop(100%,  #55342B));
+            }
+        </style>
+	</head>
+	<body ng-app="scale">
+        <div scale value="scaleValue" direction="vertical" id="gradientScale">
+	</body>
+</html>

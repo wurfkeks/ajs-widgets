@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+		<script src="diagram.js" ></script>
+        <script src="raphael.js" ></script>
+        <link rel="stylesheet" href="diagram.css"></link>
+	</head>
+	<body ng-app="diagramModule" ng-init="diaVal=[0,10,20,30,40,50,60,70,80,90,100]">
+        <input type="number" ng-model="diaVal[0]"></input>
+        <input type="number" ng-model="diaVal[1]"></input>
+        <div diagram ng-model="diaVal" radius="120" id="diagramCanvas" offset="0"></div>
+	</body>
+</html>
